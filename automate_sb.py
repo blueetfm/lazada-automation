@@ -34,13 +34,10 @@ async def main():
                 
                 if await buy_now.is_visible(timeout=2000):
                     print("!!! SUCCESS: BUY NOW DETECTED !!!")
-                    # You can add a sound here or await page.pause() to take over
                     break
                 else:
                     print("Not found yet... checking again.")
                     await asyncio.sleep(5)
-                    
-            # Keep open for manual purchase
             await asyncio.sleep(1000) 
 
     except Exception as e:
